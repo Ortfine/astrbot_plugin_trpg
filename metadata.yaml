@@ -10,7 +10,8 @@ tags:
   - sillytavern
   - 角色扮演
   - 沉浸式
-display_name: "TRPG 角色扮演"
+  - 酒馆
+display_name: "在QQ也能玩的TRPG类酒馆插件！"
 support_platforms:
   - aiocqhttp
   - qq_official
