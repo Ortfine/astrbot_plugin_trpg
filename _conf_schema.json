@@ -1,0 +1,39 @@
+{
+  "inject_mode": {
+    "description": "注入模式",
+    "type": "string",
+    "hint": "whitelist=白名单模式（默认）；persona=人格标记模式",
+    "default": "whitelist",
+    "options": ["whitelist", "persona"]
+  },
+  "persona_keyword": {
+    "description": "人格标记关键词",
+    "type": "string",
+    "hint": "persona 模式下 system prompt 含此关键词才注入",
+    "default": "#TRPG_ENABLED"
+  },
+  "whitelist_umos": {
+    "description": "白名单会话列表（whitelist 模式）",
+    "type": "list",
+    "hint": "每行一个 umo，保存并重载后自动同步",
+    "default": []
+  },
+  "world_log_enabled": {
+    "description": "世界书日志",
+    "type": "bool",
+    "hint": "激活角色卡期间自动逐轮记录对话到本地日志（不调用 AI、零额外开销），供 /查档 和 /提炼设定 使用",
+    "default": true
+  },
+  "auto_snapshot_turns": {
+    "description": "自动快照间隔（轮）",
+    "type": "int",
+    "hint": "每 N 轮对话自动把当前历史存入槽位 8~10 轮替（保留最近 3 份，开启后这 3 个槽位会被占用）；0=关闭（默认），建议 10~20",
+    "default": 0
+  },
+  "auto_distill_turns": {
+    "description": "自动提炼间隔（轮）",
+    "type": "int",
+    "hint": "世界书日志每新增 N 轮，自动调用 LLM 蒸馏设定写入角色卡世界观（后台运行，会消耗少量 LLM 额度）；0=关闭（默认），建议 20~30",
+    "default": 0
+  }
+}

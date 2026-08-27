@@ -1,0 +1,11 @@
+name: astrbot_plugin_trpg
+desc: 在 QQ/TG/Discord 私聊中实现类 SillyTavern 的轻量角色扮演体验
+version: "0.5.4"
+author: "cui"
+repo: "https://github.com/Ortfine/astrbot_plugin_trpg" # ← 建好 GitHub 仓库后填：https://github.com/<你的用户名>/astrbot_plugin_trpg
+display_name: "TRPG 角色扮演"
+support_platforms:
+  - aiocqhttp
+  - qq_official
+  - telegram
+  - discord
